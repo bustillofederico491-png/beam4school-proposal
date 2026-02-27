@@ -1,0 +1,32 @@
+# ═══════════════════════════════════════════════════════════════
+# BeamScan simulation config: PE vs PVC comparison
+# ═══════════════════════════════════════════════════════════════
+
+author: "bustillo_federico"
+description: "Comparison of polyethylene vs PVC at 3 GeV using Geant4"
+
+# ─── Beam settings ───
+beam:
+  particle: "e-"              # Electron beam
+  momentum_gev: 3.0           # Beam energy in GeV
+  num_events: 5000            # Number of simulated particles
+
+# ─── Target materials ───
+materials:
+  - name: "standard_pe"
+    geant4_name: "G4_POLYETHYLENE"
+    thickness_mm: 10.0
+
+  - name: "target_pvc"
+    geant4_name: "G4_POLYVINYL_CHLORIDE"
+    thickness_mm: 10.0
+
+# ─── Simulation outputs ───
+outputs:
+  highland_prediction: true      # Multiple scattering theory
+  geant4_simulation: true        # Run full Monte Carlo
+  classification_plot: true      # Material ID plot
+  distribution_overlay: true     # Compare distributions
+  comparison_table: true         # Numeric summary
+
+# ═══════════════════════════════════════════════════════════════
