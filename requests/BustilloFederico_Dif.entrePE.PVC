@@ -1,0 +1,34 @@
+# ═══════════════════════════════════════════════════════════════
+# BeamScan Simulation Request: Basic PVC Check
+# ═══════════════════════════════════════════════════════════════
+# Simplified proposal to compare PE vs PVC quickly.
+
+author: "Simple_User"
+description: "Basic comparison: Polyethylene vs PVC at 3 GeV"
+
+# ─── Beam Settings ───
+beam:
+  particle: "e-"            # Electrons
+  momenta_GeV: [3.0]        # Single energy to keep the plot clean
+  num_events: 5000          # Enough for clear statistics, but very fast
+
+# ─── Target Materials ───
+# Comparing the most common plastic (PE) against the target (PVC)
+materials:
+  - name: "Standard_PE"
+    geant4_name: "G4_POLYETHYLENE"
+    thickness_mm: 10.0
+
+  - name: "Target_PVC"
+    geant4_name: "G4_POLYVINYL_CHLORIDE"
+    thickness_mm: 10.0
+
+# ─── What to produce ───
+outputs:
+  highland_prediction: true    # FAST: Instant mathematical calculation
+  geant4_simulation: false     # OFF: No waiting for manual approval
+  classification_plot: true    # Fingerprint plot
+  distribution_overlay: true   # Histogram comparison
+  comparison_table: true       # Numerical summary
+
+# ═══════════════════════════════════════════════════════════════
