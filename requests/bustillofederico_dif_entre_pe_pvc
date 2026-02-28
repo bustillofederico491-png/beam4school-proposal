@@ -1,0 +1,60 @@
+simulation:
+  name: "Comparación PE vs PVC"
+  software: "Geant4"
+  events: 5000
+
+beam:
+  type: "electron"
+  energy: 3.0   # GeV
+  direction: [0, 0, 1]
+
+detector:
+  geometry: "slab"
+  thickness: 5.0   # cm
+  area: [10, 10]    # cm x cm
+
+materials:
+
+  polyethylene:
+    name: "PE"
+    formula: "C2H4"
+    density: 0.95        # g/cm3
+    atomic_number: 6
+    radiation_length: 43.3   # cm
+
+  pvc:
+    name: "PVC"
+    formula: "C2H3Cl"
+    density: 1.38        # g/cm3
+    atomic_number: 17
+    radiation_length: 25.0   # cm
+
+physics:
+  processes:
+    - multiple_scattering
+    - ionization
+    - bremsstrahlung
+
+analysis:
+  outputs:
+    - energy_loss
+    - scattering_angle
+    - particle_tracks
+
+  comparison:
+    enabled: true
+    materials:
+      - polyethylene
+      - pvc
+
+output:
+  format: "csv"
+  path: "./results/"
+  files:
+    - "pe_results.csv"
+    - "pvc_results.csv"
+
+metadata:
+  author: "Federico"
+  date: "2026-02-28"
+  description: "Simulación para comparar PE y PVC bajo electrones de 3 GeV"
