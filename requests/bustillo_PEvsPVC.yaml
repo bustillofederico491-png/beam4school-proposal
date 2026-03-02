@@ -4,7 +4,7 @@
 # Comparison: PE vs PVC
 # ═══════════════════════════════════════════════════════════════
 
-# Author placeholder: replace if you want automatic metadata in your system
+# Author (use a safe filename-friendly value inside the YAML)
 author: "Federico_Bustillo"
 
 # Short description of the experiment
@@ -21,15 +21,21 @@ materials:
   - name: "PE"
     geant4_name: "G4_POLYETHYLENE"
     thickness_mm: 10.0
-     
 
   - name: "PVC"
     geant4_name: "G4_POLYVINYL_CHLORIDE"
     thickness_mm: 10.0
 
 # ─── Outputs ───
+outputs:
   highland_prediction: true    # Always fast — Highland formula calculation
   geant4_simulation: false     # Set true for full Monte Carlo (slower, needs approval)
   classification_plot: true    # 2D fingerprint plot
   distribution_overlay: true   # Overlaid scattering angle distributions
   comparison_table: true       # Numerical comparison table
+
+# ─── Optional metadata ───
+metadata:
+  created_by: "Federico_Bustillo"
+  created_date: "2026-02-28"
+  safe_filename: "bustillo_pe_pvc.yaml"
