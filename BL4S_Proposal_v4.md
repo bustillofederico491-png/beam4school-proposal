@@ -1,4 +1,4 @@
-# BeamScan: A Particle-Beam Material Classifier — From Recycling to Heritage Science
+# BeamScan: A Particle-Beam Material Classifier: From Recycling to Heritage Science
 
 ## 1. Motivation to Participate (~116 words)
 
@@ -10,11 +10,11 @@ We are students and teachers from Instituto San Francisco de Asís in Santa Rosa
 
 ### The Question
 
-Can we build a "BeamScan Atlas" — a classification chart that identifies materials by measuring how charged particles scatter through them? We aim to demonstrate this for two real-world domains in one experiment: identifying plastics for recycling quality control and classifying geological reference materials relevant to heritage science.
+Can we build a "BeamScan Atlas": a classification chart that identifies materials by measuring how charged particles scatter through them? We aim to demonstrate this for two real-world domains in one experiment: identifying plastics for recycling quality control and classifying geological reference materials relevant to heritage science.
 
 ### The Physics
 
-When a charged particle travels through matter at GeV-scale energies, it does not go straight — it deflects slightly each time it passes near an atomic nucleus. The cumulative effect of thousands of these tiny deflections is called multiple Coulomb scattering (MCS). The resulting angular spread θ₀ follows the Highland formula:
+When a charged particle travels through matter at GeV-scale energies, it does not go straight but it deflects slightly each time it passes near an atomic nucleus. The cumulative effect of thousands of these tiny deflections is called multiple Coulomb scattering (MCS). The resulting angular spread θ₀ follows the Highland formula:
 
 $$\theta_0 \approx \frac{13.6 \text{ MeV}}{p\beta c} \sqrt{\frac{x}{X_0}} \left[1 + 0.038 \ln\left(\frac{x}{X_0}\right)\right]$$
 
@@ -30,7 +30,7 @@ The gap between both families is itself the scientific result — it proves MCS 
 Our core measurement requires only four Delay Wire Chambers (DWCs) and a target holder — standard equipment at all BL4S facilities:
 Beam (1–6 GeV/c) → DWC₁, DWC₂ → TARGET → DWC₃, DWC₄ → Pb-glass calorimeter (optional).
 Two trackers upstream measure the incoming particle direction. Two downstream measure the direction after the target.
-Subtracting the beam's natural divergence — measured in dedicated no-target runs — we extract the scattering signal from the material alone. The layout works with Delay Wire Chambers at CERN, beam telescopes at DESY, and the available tracking detectors at ELSA.
+Subtracting the beam's natural divergence (measured in dedicated no-target runs) we extract the scattering signal from the material alone. The layout works with Delay Wire Chambers at CERN, beam telescopes at DESY, and the available tracking detectors at ELSA.
 
 ### Targets and Facility Considerations
 
