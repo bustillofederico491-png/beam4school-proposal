@@ -2,7 +2,9 @@
 **Team:** Álvarez Jeremías, Baraldo Vargas Paula, Blanco Tomás, Bustillo Federico, Carabajal Ricardo, Cores Fiorella, Medina Giovanini Lorenzo, Rodríguez Matías, Yallbi Maia.
 **Coaches:** García Iskya, Rodríguez Agustina
 **Assessed by:** Arturo Sánchez Pineda
-![Team 2026](docs/figures/teamcoaches2026.png)
+<p align="center">
+  <img src="docs/figures/teamcoaches2026.png" alt="Team 2026">
+</p>
 **Instituto San Francisco de Asís, Santa Rosa de Calamuchita, Córdoba, Argentina.**
 **March 2026.**
 
@@ -19,16 +21,22 @@ Can we build a "BeamScan Atlas" — a classification chart that identifies mater
 
 ## The Physics
 When a charged particle travels through matter at GeV-scale energies, it does not go straight — it deflects slightly each time it passes near an atomic nucleus. The cumulative effect of thousands of these tiny deflections is called multiple Coulomb scattering (MCS) [2]. The resulting angular spread θ₀ follows the Highland formula:
-![Highland formula](docs/figures/Highland.png)
+<p align="center">
+  <img src="docs/figures/Highland.png" alt="Highland formula">
+</p>
 
 ## Predicted Separation
 Using the Highland formula with PDG radiation lengths [3], we calculated expected scattering angles at 3 GeV/c through 10 mm targets. The results split naturally into two families: Plastics (C, H, O, N — light atoms, long X₀): PE and PP sit at θ₀ ≈ 0.56 mrad, a pure carbon-hydrogen baseline. PS, PMMA and PET follow at 0.60–0.74 mrad. PVC stands apart at θ₀ ≈ 0.90 mrad — its chlorine atom (Z = 17) dramatically increases scattering. Geological materials (Si, Ca, Al, Fe): quartz, calcite, alumina and iron oxide scatter at θ₀ = 1.17–2.38 mrad, well separated from the plastics cluster. That gap is itself the scientific result: MCS naturally sorts materials by composition. Our Geant4 [4] simulations confirm that even the closest pairs (PS vs PMMA) need fewer than 2,000 events at 3σ — seconds of beam time. PVC versus PE needs only ~50 events. The full atlas requires under one hour of data.
-![Discrimination matrix](docs/figures/discrimination_matrix.png)
+<p align="center">
+  <img src="docs/figures/discrimination_matrix.png" alt="Discrimination matrix">
+</p>
 Figure 1: Discrimination matrix. Number of events needed for 3σ separation between each material pair at 3 GeV/c, 10 mm thickness. PE/PP is the hardest pair; most cross-family separations need fewer than 100 events.
 
 ## Experimental Setup (facility-agnostic)
 Our core measurement requires only four Delay Wire Chambers (DWCs) [5] and a target holder — standard equipment at all BL4S facilities:
-![Setup schematic](docs/figures/setup_schematic.png)
+<p align="center">
+  <img src="docs/figures/setup_schematic.png" alt="Setup schematic">
+</p>
 Figure 2: Schematic representation of the BeamScan experimental setup (facility-agnostic).
 Two upstream trackers measure the incoming particle direction, two downstream measure it after the target.
 Subtracting the beam's natural divergence — measured in dedicated no-target runs — we extract the scattering signal from the material alone. The layout works with Delay Wire Chambers at CERN, beam telescopes at DESY [6], and the available tracking detectors at ELSA [7].
@@ -37,16 +45,22 @@ Subtracting the beam's natural divergence — measured in dedicated no-target ru
 CERN and DESY accept only non-combustible targets; ELSA permits combustible materials too. Our plan adapts accordingly: at ELSA we run the full set — plastics (PE, PP, PS, PMMA, PET, Nylon, PVC) [8] plus geological references (quartz, calcite, alumina, iron oxide) [9], including the PVC "hero result." At CERN or DESY we run geological references plus graphite and metal foils as low-Z anchors — still spanning a wide X₀ range. 
 
 ## Measurement Program
-![Measurement phases and goals](docs/figures/Phases_measurement_goal.png)
+<p align="center">
+  <img src="docs/figures/Phases_measurement_goal.png" alt="Measurement phases and goals">
+</p>
 
 ## The Deliverable: BeamScan Atlas
 A measured classification table and plot of  (and extracted ) for each material. Every data point has a physical interpretation, a real-world application, and a simulation prediction to compare against. Where available, a second axis (e.g.  or calorimeter response) strengthens the classification. The atlas is a scientific result, a practical reference, and a memorable visualisation.
-![Physics explanation gap](docs/figures/physics_explanation_gap.png)
+<p align="center">
+  <img src="docs/figures/physics_explanation_gap.png" alt="Physics explanation gap">
+</p>
 Figure 3: Natural material separation and resulting scattering-angle gap. Left: Radiation length versus effective atomic number shows the clear separation between organic (low-Z) and inorganic (higher-Z) materials. Right: The corresponding scattering angles at 3 GeV/c (10 mm thickness) reveal a natural gap between the two material classes.
 
 ## Simulation and Open Science
 We have built a Geant4 Monte Carlo simulation of the full experiment, published in a public GitHub repository (https://github.com/los-topos-cosmicos/beam4school-proposal/tree/main). Every figure can be reproduced by editing a simple YAML file — no C++ or Geant4 needed. Our simulations (Geant4 11.3.2, FTFP_BERT, 2,000 events per configuration) validate the Highland predictions: across 10 of 11 materials at two momenta, Geant4 consistently exceeds Highland by 12 ± 3%, attributable to nuclear elastic scattering that the analytic formula omits. The exception is Fe₂O₃, where the ratio rises to ~1.4–1.5 — directly revealing the larger hadronic cross-section of iron nuclei — itself measurable from the same setup. This offset will calibrate our analysis: comparing real data to both Highland and Geant4 will let us separate analytic approximations from genuine detector effects.
-![Geant4 Highland ratio](docs/figures/geant4_highland_ratio.png)
+<p align="center">
+  <img src="docs/figures/geant4_highland_ratio.png" alt="Geant4 Highland ratio">
+</p>
 Figure 4: Geant4/Highland ratio for all materials at 3 and 6 GeV/c. Most materials fall within the 12 ± 3% band, consistent with nuclear elastic scattering omitted by Highland. Fe₂O₃ is a clear outlier, revealing the larger hadronic cross-section of iron nuclei.
 
 
