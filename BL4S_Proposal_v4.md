@@ -2,7 +2,7 @@
 
 **Team:** Álvarez Jeremías, Baraldo Vargas Paula, Blanco Tomás, Bustillo Federico, Carabajal Ricardo, Cores Fiorella, Medina Giovanini Lorenzo, Rodríguez Matías, Yallbi Maia.
 **Coaches:** García Iskya, Rodríguez Agustina
-**Assessed by:** Arturo Sánchez Pineda
+**Assessed by:** Sánchez Pineda Arturo
 
 ![Team 2026](docs/figures/teamcoaches2026.png)
 
@@ -84,7 +84,7 @@ We would like to sincerely thank Arturo Sánchez Pineda (PhD in Fundamental Phys
 
 ## Outreach Activity
 
-We built a public website — [BeamScan Atlas](https://los-topos-cosmicos.github.io/beam4school-proposal/outreachBilingual.html) — where anyone can see the results of our experiment: how each material produces a different scattering angle, why that happens physically, and what it means for recycling or heritage science. All the data is downloadable and open.
+We built a public website — [BeamScan Atlas](https://los-topos-cosmicos.github.io/beam4school-proposal/) — where anyone can see the results of our experiment: how each material produces a different scattering angle, why that happens physically, and what it means for recycling or heritage science. All the data is downloadable and open.
 
 We also set up a GitHub repository (https://github.com/los-topos-cosmicos/beam4school-proposal/tree/main) with our Geant4 simulations, analysis scripts, raw data, and tutorials written in Spanish and English. The idea is that any student — anywhere in Latin America — can fork the repo, edit a YAML file, and get their own scattering prediction in about 30 seconds, without installing anything. We wanted it to feel like something you can actually touch.
 
@@ -140,3 +140,14 @@ https://gridarendal-website-live.s3.amazonaws.com/production/documents/:s_docume
 *Mineralogy: An Introduction to Minerals, Rocks, and Mineral Deposits*.
 Springer, 2020.
 https://doi.org/10.1007/978-3-662-57316-7
+
+<div align="center">
+
+**Built with ❤️ in Córdoba, Argentina for CERN Beamline for Schools 2026**
+
+🇦🇷 → 🔬 → 🌍
+
+*¡La física fundamental es para todos!*
+
+</div>
+
