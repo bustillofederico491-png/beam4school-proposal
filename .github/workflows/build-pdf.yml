@@ -13,6 +13,7 @@ on:
     branches: [main]
     paths:
       - 'BL4S_Proposal_v4.md'
+      - 'BL4S_Proposal_español.md'
       - 'docs/slides/BeamScan-Overview.marp.md'
       - 'docs/slides/BeamScan-TechDeep.marp.md'
   workflow_dispatch:
@@ -34,7 +35,7 @@ jobs:
       - name: Install Marp CLI
         run: npm install -g @marp-team/marp-cli
 
-      - name: Build proposal PDF
+      - name: Build proposal PDF (English)
         run: |
           mkdir -p docs/pdf
           pandoc BL4S_Proposal_v4.md -o docs/pdf/BL4S_2026_BeamScan_v4.pdf \
@@ -47,6 +48,24 @@ jobs:
             -V colorlinks=true \
             -V linkcolor=blue \
             -V urlcolor=blue
+
+      - name: Build proposal PDF (Spanish)
+        run: |
+          if [ -s "BL4S_Proposal_español.md" ]; then
+            pandoc "BL4S_Proposal_español.md" -o docs/pdf/BL4S_2026_BeamScan_v4_es.pdf \
+              --pdf-engine=xelatex \
+              -V mainfont="DejaVu Serif" \
+              -V sansfont="DejaVu Sans" \
+              -V monofont="DejaVu Sans Mono" \
+              -V geometry:margin=2.5cm \
+              -V fontsize=11pt \
+              -V colorlinks=true \
+              -V linkcolor=blue \
+              -V urlcolor=blue
+            echo "✅ Spanish PDF built"
+          else
+            echo "⏭️  Spanish proposal is a stub — skipping PDF build"
+          fi
 
       - name: Build slide PDFs
         run: |
